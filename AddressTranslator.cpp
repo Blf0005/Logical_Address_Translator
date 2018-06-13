@@ -20,6 +20,7 @@
 
 #include <iostream>
 #include <math.h>
+#include <bitset>
 
 using namespace std;
 
