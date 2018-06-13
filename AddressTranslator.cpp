@@ -131,7 +131,7 @@ void getOffset(){
 }
 
 void calcPysicalAddr(){
-	int in;
+	int in, shift;
 	cout << "\n\n\nEnter the Frame number in Hexadecimal. (DO NOT INCLUDE 0x) : "; // prompt user for frame number
 	cin >> hex >> in;
 	frameNum = in;
@@ -140,10 +140,16 @@ void calcPysicalAddr(){
 	cout << "You entered a frame number of: 0x"; // print value in hex
 	cout << std::hex << frameNum << '\n';
 		
-	PhysicalAddr = (frameNum << int(log2(offset)+1)) & (offset);
-		
+	
+	shift = int(log2(offset)+1);	
+	PhysicalAddr = (frameNum << shift);
+	PhysicalAddr = (PhysicalAddr ^ offset); 
 	//Cheating and just printing them out for now because the above calculation isnt working.	
+	//cout << "\n\nThe Physical Address in Hex is: 0x";
+	//cout << std::hex << frameNum;
+	//cout << std::hex << offset << '\n';
 	cout << "\n\nThe Physical Address in Hex is: 0x";
-	cout << std::hex << frameNum;
-	cout << std::hex << offset << '\n';
+	cout << std::hex << PhysicalAddr << '\n';
+	cout << "The Physical Address in Binary is: ";
+	cout << std::bitset<32>(PhysicalAddr) << '\n';
 }
