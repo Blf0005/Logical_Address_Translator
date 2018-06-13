@@ -30,4 +30,6 @@ https://blf0005.github.io/Logical_Address_Translator/
 
 This program is provided free of charge to anyone obtaining a copy. The program may be periodically updated for added functionality or to fix any issues; however, it will not be actively maintained on a regular basis. 
 
+If you create an issue inside of the repository, it will be addressed as soon as possible; however no gurantees will be made that the issue will be resolved in a timely manner, or that the issue will ever be resolved.
+
 
