@@ -2,7 +2,7 @@
 *                        Logical Address Translator                           *
 *																			  *
 * Author: Blakely Fabiani 													  *
-* Cntact: BlakelyFabiani@gmail.com                                            *                        
+* Contact: BlakelyFabiani@gmail.com                                            *                        
 * Date: June 12, 20018                                                        *
 * Copyright (c) 2018 Blakely Fabiani		  								  *
 *																		      *
@@ -114,7 +114,82 @@ void getPageNumber(){
 	cout << "The Page number in Hex is: 0x"; // print page number value in Hex
 	cout << std::hex << pageNum << '\n';
 	cout << "The Page number in Binary is: "; // print page number value in Binary
-	cout << std::bitset<32>(pageNum) << '\n';
+	//cout << std::bitset<32>(pageNum) << '\n';
+	
+	switch(int(log2(pageNum)+1)) {
+		case 0: // 00
+		cout << std::bitset<4>(pageNum) << '\n';
+			break;
+		case 1: // 0001
+			cout << std::bitset<4>(pageNum) << '\n';
+			break;
+		case 2: // 0010
+			cout << std::bitset<4>(pageNum) << '\n';
+			break;
+		case 3: // 0011
+			cout << std::bitset<4>(pageNum) << '\n';
+			break;
+		case 4: // 0100
+			cout << std::bitset<4>(pageNum) << '\n';
+			break;
+		case 5: // 0101
+			cout << std::bitset<8>(pageNum) << '\n';
+			break;
+		case 6: // 0110
+			cout << std::bitset<8>(pageNum) << '\n';
+			break;
+		case 7: // 0111
+			cout << std::bitset<8>(pageNum) << '\n';
+			break;
+		case 8: // 1000
+			cout << std::bitset<8>(pageNum) << '\n';
+			break;
+		case 9: // 1001
+			cout << std::bitset<12>(pageNum) << '\n';
+			break;
+		case 10: // 1010
+			cout << std::bitset<12>(pageNum) << '\n';
+			break;
+		case 11: // 1011
+			cout << std::bitset<12>(pageNum) << '\n';
+			break;
+		case 12: // 1100
+			cout << std::bitset<12>(pageNum) << '\n';
+			break;
+		case 13: // 1101
+			cout << std::bitset<16>(pageNum) << '\n';
+			break;
+		case 14: // 1110
+			cout << std::bitset<16>(pageNum) << '\n';
+			break;
+		case 15: // 1111
+			cout << std::bitset<16>(pageNum) << '\n';
+			break;
+		case 16: // 0001 1111
+			cout << std::bitset<16>(pageNum) << '\n';
+			break;
+		case 17: // 0010 1111
+			cout << std::bitset<20>(pageNum) << '\n';
+			break;
+		case 18: // 0011 1111
+			cout << std::bitset<20>(pageNum) << '\n';
+			break;
+		case 19: // 0100 1111
+			cout << std::bitset<20>(pageNum) << '\n';
+			break;
+		case 20: // 0101 1111
+			cout << std::bitset<20>(pageNum) << '\n';
+			break;
+		case 21: // 0110 1111
+			cout << std::bitset<21>(pageNum) << '\n';
+			break;
+		case 22: // 0111 1111
+			cout << std::bitset<22>(pageNum) << '\n';
+			break;
+		default:
+			cout << std::bitset<32>(pageNum) << '\n';
+			break;
+		}
 	
 }
 
@@ -128,7 +203,28 @@ void getOffset(){
 	cout << "The Offset in Hex is: 0x"; // print offset value in Hex
 	cout << std::hex << offset << '\n';
 	cout << "The Offset in Binary is: "; // print offset value in Binary
-	cout << std::bitset<32>(offset) << '\n';
+	//cout << std::bitset<32>(offset) << '\n';
+	
+	switch(offsetShift) {
+		case 9: // 01
+			cout << std::bitset<9>(offset) << '\n';
+			break;
+		case 10: // 10
+			cout << std::bitset<10>(offset) << '\n';
+			break;
+		case 11: // 11
+			cout << std::bitset<11>(offset) << '\n';
+			break;
+		case 12: // 10
+			cout << std::bitset<12>(offset) << '\n';
+			break;
+		case 13: // 11
+			cout << std::bitset<13>(offset) << '\n';
+			break;
+		default:
+			cout << std::bitset<32>(offset) << '\n';
+			break;
+	}
 }
 
 void calcPysicalAddr(){
@@ -143,7 +239,7 @@ void calcPysicalAddr(){
 		
 	
 	shift = int(log2(offset)+1);	
-	PhysicalAddr = (frameNum << shift);
+	PhysicalAddr = (frameNum << offsetShift);
 	PhysicalAddr = (PhysicalAddr ^ offset); 
 	//Cheating and just printing them out for now because the above calculation isnt working.	
 	//cout << "\n\nThe Physical Address in Hex is: 0x";
