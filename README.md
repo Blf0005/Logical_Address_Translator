@@ -10,7 +10,7 @@ The program will require a user input of the page size and the CPU generated log
 ### Web Page
 
 The webpage for this program containing the contents of this ReadMe file can be found at: 
-https://blf0005.github.io/Logical_Address_Translator/
+
 <a href="https://blf0005.github.io/Logical_Address_Translator/">https://blf0005.github.io/Logical_Address_Translator/</a>
 
 
