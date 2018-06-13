@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## Logical Address Translator
 
-You can use the [editor on GitHub](https://github.com/Blf0005/Logical_Address_Translator/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This program performs a logical address translation from a CPU generated logical address to a corresponding physical address. 
+The program will require a user input of the page size and the CPU generated logical address and will then generate the correct page number. The user will then look up the page number in the page table and enter the frame contents in Hexadecimal. The program uses this information to determine the Physical address of the process. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Web Page
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The webpage for this program containing the contents of this ReadMe file can be found at: 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+### License
+* Copyright (c) 2018 Blakely Fabiani		  								                    *
+*																		                                          *
+* Permission is hereby granted, free of charge, to any person obtaining       *
+* a copy of this software and associated documentation files (the             *
+* "Software"), to deal in the Software without restriction, including         *
+* without limitation the rights to use, copy, modify, merge, publish,         *
+* distribute, sublicense, and/or sell copies of the Software, and to		      *
+* permit persons to whom the Software is furnished to do so, subject to       *
+* the following conditions:													                          *
+*																		                                          *
+* The above copyright notice and this permission notice shall be included     *
+* in all copies or substantial portions of the Software.					            *
 
-1. Numbered
-2. List
+### Support
 
-**Bold** and _Italic_ and `Code` text
+This program is provided free of charge to anyone obtaining a copy. The program may be periodically updated for added functionality or to fix any issues; however, it will not be actively maintained on a regular basis. 
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Blf0005/Logical_Address_Translator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
